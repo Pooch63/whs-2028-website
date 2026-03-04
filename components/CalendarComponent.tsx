@@ -60,26 +60,26 @@ export default function CalendarComponent({
     days.push(i);
   }
 
-  // Desktop view - full month (condensed)
+  // Desktop view - full month (ultra condensed)
   const DesktopCalendar = () => (
     <div className="hidden md:block">
-      <div className="grid grid-cols-7 gap-1 mb-2">
+      <div className="grid grid-cols-7 mb-1">
         {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
-          <div key={day} className="text-center font-bold text-maroon-700 text-sm py-1">
+          <div key={day} className="text-center font-bold text-maroon-700 text-xs py-1 border border-maroon-100">
             {day}
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-7 gap-1">
+      <div className="grid grid-cols-7 border border-maroon-200">
         {days.map((day, index) => (
           <div
             key={index}
-            className="aspect-square bg-white border border-maroon-200 rounded p-1 flex flex-col items-center justify-center text-center"
+            className="aspect-square bg-white border border-maroon-200 p-1 flex flex-col justify-start text-left relative"
           >
             {day ? (
               <>
-                <div className="font-bold text-maroon-900 text-xs">{day}</div>
-                <div className="text-[10px] text-maroon-600 line-clamp-2 leading-tight">
+                <div className="font-bold text-maroon-900 text-xs leading-none">{day}</div>
+                <div className="text-[9px] text-maroon-600 line-clamp-3 leading-tight mt-1">
                   {rafflePhrasesArray[(day - 1) % rafflePhrasesArray.length]}
                 </div>
               </>
@@ -90,7 +90,7 @@ export default function CalendarComponent({
     </div>
   );
 
-  // Mobile view - vertical week scrolling
+  // Mobile view - vertical week scrolling (compact)
   const MobileCalendar = () => {
     const weeks: (number | null)[][] = [];
     for (let i = 0; i < days.length; i += 7) {
@@ -99,17 +99,17 @@ export default function CalendarComponent({
 
     return (
       <div className="md:hidden">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-3">
           <button
             onClick={() => setSelectedWeek(Math.max(0, selectedWeek - 1))}
-            className="p-2 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
+            className="p-1 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
             disabled={selectedWeek === 0}
             aria-label="Previous week"
           >
-            <ChevronUp className="w-6 h-6" />
+            <ChevronUp className="w-5 h-5" />
           </button>
           <span className="text-xs font-semibold text-maroon-700">
-            Week {selectedWeek + 1} of {Math.ceil(days.length / 7)}
+            Week {selectedWeek + 1}
           </span>
           <button
             onClick={() =>
@@ -117,32 +117,32 @@ export default function CalendarComponent({
                 Math.min(Math.ceil(days.length / 7) - 1, selectedWeek + 1)
               )
             }
-            className="p-2 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
+            className="p-1 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
             disabled={selectedWeek === Math.ceil(days.length / 7) - 1}
             aria-label="Next week"
           >
-            <ChevronDown className="w-6 h-6" />
+            <ChevronDown className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="grid grid-cols-7 gap-1 mb-3">
+        <div className="grid grid-cols-7 mb-1 border border-maroon-200">
           {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day) => (
-            <div key={day} className="text-center font-bold text-maroon-700 text-xs py-1">
+            <div key={day} className="text-center font-bold text-maroon-700 text-xs py-1 border border-maroon-200">
               {day}
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-7 gap-1">
+        <div className="grid grid-cols-7 border border-maroon-200">
           {weeks[selectedWeek]?.map((day, index) => (
             <div
               key={index}
-              className="aspect-square bg-white border border-maroon-200 rounded p-1 flex flex-col items-center justify-center text-center"
+              className="aspect-square bg-white border border-maroon-200 p-1 flex flex-col justify-start text-left"
             >
               {day ? (
                 <>
-                  <div className="font-bold text-maroon-900 text-xs">{day}</div>
-                  <div className="text-[10px] text-maroon-600 line-clamp-2 leading-tight">
+                  <div className="font-bold text-maroon-900 text-xs leading-none">{day}</div>
+                  <div className="text-[9px] text-maroon-600 line-clamp-3 leading-tight mt-1">
                     {rafflePhrasesArray[(day - 1) % rafflePhrasesArray.length]}
                   </div>
                 </>

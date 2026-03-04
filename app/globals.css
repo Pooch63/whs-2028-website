@@ -95,4 +95,6 @@ body {
   .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
   .hover\:rotate-1:hover { transform: rotate(1deg); }
   .hover\:-rotate-1:hover { transform: rotate(-1deg); }
+  .hover\:rotate-45:hover { transform: rotate(45deg); }
+  .hover\:-rotate-45:hover { transform: rotate(-45deg); }
 }
