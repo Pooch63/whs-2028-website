@@ -91,4 +91,8 @@ body {
   .hover\:bg-maroon-700:hover { background-color: rgb(var(--color-maroon-700)); }
   .hover\:text-maroon-100:hover { color: rgb(var(--color-maroon-100)); }
   .hover\:text-maroon-800:hover { color: rgb(var(--color-maroon-800)); }
+
+  .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+  .hover\:rotate-1:hover { transform: rotate(1deg); }
+  .hover\:-rotate-1:hover { transform: rotate(-1deg); }
 }

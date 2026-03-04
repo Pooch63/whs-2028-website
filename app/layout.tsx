@@ -32,20 +32,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        <nav className="bg-maroon-600 text-white shadow-md sticky top-0 z-50">
+        <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex justify-between items-center">
-              <Link href="/" className="text-2xl font-bold hover:text-maroon-100 transition">
+              <Link href="/" className="text-2xl font-bold text-maroon-600 hover:text-maroon-700 transition">
                 WHS Class of 2028
               </Link>
               <div className="flex gap-6">
-                <Link href="/" className="hover:text-maroon-100 transition">
+                <Link href="/" className="text-maroon-700 hover:text-maroon-900 transition font-medium">
                   Home
                 </Link>
-                <Link href="/semiformal" className="hover:text-maroon-100 transition">
+                <Link href="/semiformal" className="text-maroon-700 hover:text-maroon-900 transition font-medium">
                   Semiformal
                 </Link>
-                <Link href="/raffle" className="hover:text-maroon-100 transition">
+                <Link href="/raffle" className="text-maroon-700 hover:text-maroon-900 transition font-medium">
                   April Raffle
                 </Link>
               </div>
