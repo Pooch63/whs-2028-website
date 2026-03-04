@@ -2,18 +2,18 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-white">
         {/* Background Image - Centered, Aspect Ratio, No Width Scaling */}
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/whs.jpg"
+            src="/images/whs.jpg"
             alt="WHS Class of 2028"
             className="w-full h-full object-cover"
           />
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
         </div>
 
         {/* Hero Content */}
@@ -29,13 +29,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
               href="/semiformal"
-              className="inline-block px-8 py-4 bg-white text-maroon-600 font-bold rounded-lg shadow-lg text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:rotate-1"
+              className="inline-block px-8 py-4 bg-white text-maroon-600 font-bold rounded-lg shadow-lg text-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-110"
             >
               About Semiformal
             </Link>
             <Link
               href="/raffle"
-              className="inline-block px-8 py-4 bg-maroon-400 text-white font-bold rounded-lg shadow-lg text-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:-rotate-1"
+              className="inline-block px-8 py-4 bg-maroon-400 text-white font-bold rounded-lg shadow-lg text-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-110"
             >
               About April Raffle
             </Link>

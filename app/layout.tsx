@@ -53,9 +53,9 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer className="bg-maroon-900 text-white py-8 mt-16">
+        <footer className="bg-maroon-900 py-8 mt-16">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <p>&copy; 2026 Wellesley High School Class of 2028. All rights reserved.</p>
+            <p className="text-white">&copy; 2026 Wellesley High School Class of 2028. All rights reserved.</p>
           </div>
         </footer>
       </body>
