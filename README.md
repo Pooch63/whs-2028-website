@@ -1,36 +1,179 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WHS Class of 2028 Website
+
+A modern Next.js website for Wellesley High School Class of 2028, featuring information about Semiformal and the April Raffle fundraising events.
+
+## Features
+
+### 🏠 Landing Page (/)
+- Eye-catching hero section with gradient background
+- Two prominent CTAs: "About Semiformal" and "About April Raffle"
+- Fundraising message component explaining the importance of the fundraiser
+- Info cards with quick links to main events
+- Mobile-responsive design
+
+### 🎭 Semiformal Page (/semiformal)
+- Complete event details (date, time, location)
+- Event features and highlights
+- **Dynamic ticket pricing system:**
+  - Phase 1 (March 13-27): $50/student - "Early Bird" pricing
+  - Phase 2 (April 18-25): $65/student - "Final Chance" pricing
+  - Outside windows: Shows closed status with next opening date
+- Fundraising message component
+- FAQ section
+- Mobile-responsive design
+
+### 🎁 April Raffle Page (/raffle)
+- How-to guide for raffle mechanics
+- **Interactive calendar component:**
+  - Desktop: Full month view of April 2026
+  - Mobile: Week-by-week navigation
+  - Each day displays a unique prize phrase
+- Prize categories showcase
+- Fundraising message component
+- FAQ section
+- Mobile-responsive design
+
+### 💡 Reusable Components
+
+#### FundraisingMessage
+Explains the importance of Class of 2028 fundraising:
+- Supporting the class goals
+- Emphasizes sophomore year fundraising criticality
+- Highlights junior & senior year expenses (boat cruise, prom)
+- Motivates maximum fund raising
+
+#### CalendarComponent
+Interactive April 2026 calendar with prize listings:
+- Desktop: Full month grid view
+- Mobile: Week-by-week clickthrough interface
+- 30 unique prize phrases rotating through the month
+- Responsive and accessible
+
+#### TicketPricing
+Dynamic pricing component that:
+- Checks current date against Phase 1 and Phase 2 windows
+- Displays current pricing and remaining days
+- Shows closed/upcoming messages
+- Updates in real-time based on current date
+
+## Tech Stack
+
+- **Framework:** Next.js 15 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS with custom maroon color palette
+- **Components:** React functional components with hooks
+- **Build:** Server-side rendering with client-side interactivity
+
+## Color Scheme
+
+Muted maroon with white accents:
+- Primary: `#6B4C5A` (Maroon-600)
+- Variations: Complete maroon color palette (50-900)
+- Accent: White text and backgrounds
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Pooch63/whs-2028-website.git
+cd whs-2028-website
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The website will be available at `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## File Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+whs-2028-website/
+├── app/
+│   ├── layout.tsx          # Root layout with navigation
+│   ├── page.tsx            # Landing page
+│   ├── globals.css         # Global styles
+│   ├── semiformal/
+│   │   └── page.tsx        # Semiformal event page
+│   └── raffle/
+│       └── page.tsx        # April raffle page
+├── components/
+│   ├── FundraisingMessage.tsx  # Fundraising info component
+│   ├── TicketPricing.tsx       # Dynamic pricing component
+│   └── CalendarComponent.tsx   # Interactive calendar
+├── public/                 # Static assets
+├── tailwind.config.js      # Tailwind configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Dates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Phase 1 Ticket Sales:** March 13-27, 2026 ($50/student)
+- **Phase 2 Ticket Sales:** April 18-25, 2026 ($65/student)
+- **Semiformal Event:** May 8, 2026 at Elm Bank, Wellesley, MA
+- **Raffle Period:** Throughout April 2026 with daily prize drawings
 
-## Deploy on Vercel
+## Development Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Dynamic Pricing Logic
+The `TicketPricing` component automatically detects the current date and displays appropriate messaging:
+- Shows early bird pricing and countdown during Phase 1
+- Shows final chance pricing and countdown during Phase 2
+- Shows appropriate messages before Phase 1 and between phases
+- Shows sold out message after Phase 2
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Responsive Design
+All pages are optimized for:
+- Mobile (320px and up)
+- Tablet (768px and up)
+- Desktop (1024px and up)
+
+The raffle calendar specifically implements:
+- Full month view on desktop
+- Week-by-week navigation on mobile with Previous/Next buttons
+
+## Deployment
+
+This site can be easily deployed to:
+- **Vercel** (recommended for Next.js)
+- **Netlify**
+- **AWS Amplify**
+- Any Node.js hosting platform
+
+### Vercel Deployment
+```bash
+npm install -g vercel
+vercel
+```
+
+## Contributing
+
+Please submit pull requests with any improvements or bug fixes.
+
+## License
+
+© 2026 Wellesley High School Class of 2028. All rights reserved.
+
+## Contact
+
+For questions or issues, please contact the Class of 2028 organizing committee.
+
+---
+
+**Repository:** https://github.com/Pooch63/whs-2028-website
