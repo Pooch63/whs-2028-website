@@ -19,7 +19,7 @@ export default function SemiformalPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-maroon to-maroon py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+          <h1 className="page-hero-title">
             Semiformal
           </h1>
         </div>

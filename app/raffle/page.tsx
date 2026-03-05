@@ -17,9 +17,9 @@ export default function RafflePage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-maroon to-maroon py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-maroon to-maroon py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+          <h1 className="page-hero-title">
             April Raffle
           </h1>
         </div>
