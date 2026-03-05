@@ -30,12 +30,21 @@
   color-scheme: light;
 }
 
+/** Always light mode */
+:root {
+  color-scheme: light !important;
+}
+html, body {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --color-bg: 10 10 10;
-    --color-text-primary: 237 237 237;
+    color-scheme: light !important;
+  }
+  html, body {
+    background: var(--background) !important;
+    color: var(--foreground) !important;
   }
 }
 
