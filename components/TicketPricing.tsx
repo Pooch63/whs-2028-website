@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 interface PricingInfo {
-  phase: string;
+  heading: string;
   price: number;
   startDate: Date;
   endDate: Date;
@@ -30,64 +30,64 @@ export default function TicketPricing() {
 
     let info: PricingInfo | null = null;
 
-    // Check if in Phase 1
+    // First ticket window: March 13-27 ($50)
     if (today >= phase1Start && today <= phase1End) {
       const daysLeft = Math.ceil((phase1End.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
       info = {
-        phase: 'Phase 1 - Early Bird',
+        heading: 'First ticket window — $50',
         price: 50,
         startDate: phase1Start,
         endDate: phase1End,
-        message: `Early Bird pricing active! ${daysLeft} days remaining.`,
+        message: `Buy now — prices go up in the second window. Only ${daysLeft} days left at $50.`,
         daysRemaining: daysLeft,
         isActive: true,
         status: 'active',
       };
     }
-    // Check if in Phase 2
+    // Second ticket window: April 18-25 ($65, increased price)
     else if (today >= phase2Start && today <= phase2End) {
       const daysLeft = Math.ceil((phase2End.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
       info = {
-        phase: 'Phase 2 - Final Chance',
+        heading: 'Second ticket window — $65 (increased price)',
         price: 65,
         startDate: phase2Start,
         endDate: phase2End,
-        message: `Final chance to buy tickets! ${daysLeft} days remaining.`,
+        message: `Prices increased. Last chance — ${daysLeft} days until sales close. Buy tickets now.`,
         daysRemaining: daysLeft,
         isActive: true,
         status: 'active',
       };
     }
-    // Before Phase 1
+    // Before first window
     else if (today < phase1Start) {
       const daysUntil = Math.ceil((phase1Start.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
       info = {
-        phase: 'Ticket Sales Closed',
+        heading: 'Ticket sales open March 13',
         price: 0,
         startDate: phase1Start,
         endDate: phase2End,
-        message: `Ticket sales open March 13, 2026. Check back in ${daysUntil} days!`,
+        message: `First window opens March 13 — $50. Second window (April 18) will be $65. Buy early and save.`,
         isActive: false,
         status: 'upcoming',
       };
     }
-    // Between Phase 1 and Phase 2
+    // Between first and second window
     else if (today > phase1End && today < phase2Start) {
       const daysUntil = Math.ceil((phase2Start.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
       info = {
-        phase: 'Ticket Sales Paused',
+        heading: 'First window closed — second window has higher prices',
         price: 0,
         startDate: phase2Start,
         endDate: phase2End,
-        message: `Phase 2 tickets open April 18, 2026. Check back in ${daysUntil} days!`,
+        message: `Second ticket window opens April 18 at $65 (prices increased). You missed the $50 window — get yours when sales reopen.`,
         isActive: false,
         status: 'upcoming',
       };
     }
-    // After Phase 2
+    // After second window
     else {
       info = {
-        phase: 'Ticket Sales Closed',
+        heading: 'Ticket sales ended',
         price: 0,
         startDate: phase1Start,
         endDate: phase2End,
@@ -105,19 +105,19 @@ export default function TicketPricing() {
   }
 
   return (
-    <div className="bg-white border-2 border-maroon-200 rounded-lg p-8 my-8">
+    <div className="bg-white border-2 border-maroon-light rounded-lg p-8 my-8">
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-maroon-900 mb-2">
-          {pricingInfo.phase}
+        <h2 className="text-3xl font-bold text-maroon mb-2">
+          {pricingInfo.heading}
         </h2>
 
         {pricingInfo.isActive ? (
           <div className="mb-6">
-            <div className="text-5xl font-bold text-maroon-600 mb-2">
+            <div className="text-5xl font-bold text-maroon mb-2">
               ${pricingInfo.price}
               <span className="text-lg text-gray-600">/student</span>
             </div>
-            <div className="bg-maroon-100 text-maroon-800 px-4 py-2 rounded-lg inline-block font-semibold">
+            <div className="bg-maroon-light text-maroon px-4 py-2 rounded-lg inline-block font-semibold">
               {pricingInfo.message}
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function TicketPricing() {
         )}
 
         {pricingInfo.isActive && (
-          <button className="bg-maroon-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-maroon-700 transition-colors">
+          <button className="bg-maroon text-bg px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-colors">
             Buy Tickets
           </button>
         )}

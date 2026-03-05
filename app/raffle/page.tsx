@@ -16,9 +16,9 @@ export default function RafflePage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-maroon-700 to-maroon-900 text-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-maroon to-maroon py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
             April Raffle
           </h1>
         </div>
@@ -27,25 +27,25 @@ export default function RafflePage() {
       {/* How It Works */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-maroon-50 rounded-lg p-6 border-t-4 border-maroon-600">
-            <div className="text-3xl font-bold text-maroon-600 mb-3">1</div>
-            <h3 className="font-bold text-maroon-900 mb-2">Buy Raffle Tickets</h3>
+          <div className="bg-maroon-light rounded-lg p-6 border-t-4 border-maroon">
+            <div className="text-3xl font-bold text-maroon mb-3">1</div>
+            <h3 className="font-bold text-maroon mb-2">Buy Raffle Tickets</h3>
             <p className="text-gray-700 text-sm">
               Purchase raffle tickets before April 2026 begins to enter daily drawings.
             </p>
           </div>
 
-          <div className="bg-maroon-50 rounded-lg p-6 border-t-4 border-maroon-600">
-            <div className="text-3xl font-bold text-maroon-600 mb-3">2</div>
-            <h3 className="font-bold text-maroon-900 mb-2">Daily Drawings</h3>
+          <div className="bg-maroon-light rounded-lg p-6 border-t-4 border-maroon">
+            <div className="text-3xl font-bold text-maroon mb-3">2</div>
+            <h3 className="font-bold text-maroon mb-2">Daily Drawings</h3>
             <p className="text-gray-700 text-sm">
               Throughout April, check the calendar to see what prizes are available each day.
             </p>
           </div>
 
-          <div className="bg-maroon-50 rounded-lg p-6 border-t-4 border-maroon-600">
-            <div className="text-3xl font-bold text-maroon-600 mb-3">3</div>
-            <h3 className="font-bold text-maroon-900 mb-2">Win Prizes</h3>
+          <div className="bg-maroon-light rounded-lg p-6 border-t-4 border-maroon">
+            <div className="text-3xl font-bold text-maroon mb-3">3</div>
+            <h3 className="font-bold text-maroon mb-2">Win Prizes</h3>
             <p className="text-gray-700 text-sm">
               Prizes range from gift cards to experiences, all supporting Class of 2028.
             </p>
@@ -56,7 +56,7 @@ export default function RafflePage() {
       {/* Calendar Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-maroon-900 mb-6 text-center">
+          <h2 className="text-2xl font-bold text-maroon mb-6 text-center">
             April 2026 Prize Calendar
           </h2>
 
@@ -69,11 +69,11 @@ export default function RafflePage() {
       {/* Prize Information */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon-600">
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon">
             <div className="flex items-start gap-3">
-              <Gift className="w-6 h-6 text-maroon-600 flex-shrink-0 mt-1" />
+              <Gift className="w-6 h-6 text-maroon flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-maroon-900 mb-2">Gift Cards</h3>
+                <h3 className="font-bold text-maroon mb-2">Gift Cards</h3>
                 <p className="text-gray-700 text-sm">
                   Popular retailers and restaurants — Amazon to local favorites.
                 </p>
@@ -81,11 +81,11 @@ export default function RafflePage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon-600">
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon">
             <div className="flex items-start gap-3">
-              <Popcorn className="w-6 h-6 text-maroon-600 flex-shrink-0 mt-1" />
+              <Popcorn className="w-6 h-6 text-maroon flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-maroon-900 mb-2">Entertainment</h3>
+                <h3 className="font-bold text-maroon mb-2">Entertainment</h3>
                 <p className="text-gray-700 text-sm">
                   Movie tickets, streaming credits, concert passes, and more.
                 </p>
@@ -93,11 +93,11 @@ export default function RafflePage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon-600">
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon">
             <div className="flex items-start gap-3">
-              <Gamepad2 className="w-6 h-6 text-maroon-600 flex-shrink-0 mt-1" />
+              <Gamepad2 className="w-6 h-6 text-maroon flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-maroon-900 mb-2">Tech & Gadgets</h3>
+                <h3 className="font-bold text-maroon mb-2">Tech & Gadgets</h3>
                 <p className="text-gray-700 text-sm">
                   Wireless earbuds, portable chargers, phone cases, and more.
                 </p>
@@ -105,11 +105,11 @@ export default function RafflePage() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon-600">
+          <div className="bg-white rounded-lg shadow p-6 border-l-4 border-maroon">
             <div className="flex items-start gap-3">
-              <Sparkles className="w-6 h-6 text-maroon-600 flex-shrink-0 mt-1" />
+              <Sparkles className="w-6 h-6 text-maroon flex-shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-maroon-900 mb-2">Experiences</h3>
+                <h3 className="font-bold text-maroon mb-2">Experiences</h3>
                 <p className="text-gray-700 text-sm">
                   Spa treatments, hobby classes, game night packages, and dining experiences.
                 </p>

@@ -1,11 +1,21 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  /* Background & Foreground */
+  /* Light theme (default) */
   --background: #ffffff;
   --foreground: #1f1f1f;
 
-  /* Primary Colors - Muted Maroon */
+  /* Background color for use with Tailwind's bg utility */
+  --color-bg: 255 255 255;
+
+  /* Text color for use with Tailwind's text utility */
+  --color-text-primary: 31 31 31;
+  --color-text-secondary: 107 114 128;
+  --color-text-light: 156 163 175;
+
+  /* Muted Maroon Color Palette - RGB format for Tailwind opacity support */
   --color-maroon-50: 245 241 243;
   --color-maroon-100: 237 229 232;
   --color-maroon-200: 217 201 211;
@@ -17,84 +27,39 @@
   --color-maroon-800: 74 52 70;
   --color-maroon-900: 61 41 57;
 
-  /* White */
-  --color-white: 255 255 255;
-  --color-white-off: 245 245 245;
-
-  /* Neutral Text */
-  --color-text-primary: 31 31 31;
-  --color-text-secondary: 107 114 128;
-  --color-text-light: 156 163 175;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-@layer theme {
+@media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: light;
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --color-bg: 10 10 10;
+    --color-text-primary: 237 237 237;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Maroon color utilities for Tailwind v4 */
+* {
+  box-sizing: border-box;
+}
+
+/* Utility classes for custom transforms */
 @layer utilities {
-  .bg-maroon-50 { background-color: rgb(var(--color-maroon-50)); }
-  .bg-maroon-100 { background-color: rgb(var(--color-maroon-100)); }
-  .bg-maroon-200 { background-color: rgb(var(--color-maroon-200)); }
-  .bg-maroon-300 { background-color: rgb(var(--color-maroon-300)); }
-  .bg-maroon-400 { background-color: rgb(var(--color-maroon-400)); }
-  .bg-maroon-500 { background-color: rgb(var(--color-maroon-500)); }
-  .bg-maroon-600 { background-color: rgb(var(--color-maroon-600)); }
-  .bg-maroon-700 { background-color: rgb(var(--color-maroon-700)); }
-  .bg-maroon-800 { background-color: rgb(var(--color-maroon-800)); }
-  .bg-maroon-900 { background-color: rgb(var(--color-maroon-900)); }
+  .hover\:rotate-45:hover {
+    transform: rotate(45deg);
+  }
 
-  .text-maroon-50 { color: rgb(var(--color-maroon-50)); }
-  .text-maroon-100 { color: rgb(var(--color-maroon-100)); }
-  .text-maroon-200 { color: rgb(var(--color-maroon-200)); }
-  .text-maroon-300 { color: rgb(var(--color-maroon-300)); }
-  .text-maroon-400 { color: rgb(var(--color-maroon-400)); }
-  .text-maroon-500 { color: rgb(var(--color-maroon-500)); }
-  .text-maroon-600 { color: rgb(var(--color-maroon-600)); }
-  .text-maroon-700 { color: rgb(var(--color-maroon-700)); }
-  .text-maroon-800 { color: rgb(var(--color-maroon-800)); }
-  .text-maroon-900 { color: rgb(var(--color-maroon-900)); }
-
-  .border-maroon-50 { border-color: rgb(var(--color-maroon-50)); }
-  .border-maroon-100 { border-color: rgb(var(--color-maroon-100)); }
-  .border-maroon-200 { border-color: rgb(var(--color-maroon-200)); }
-  .border-maroon-300 { border-color: rgb(var(--color-maroon-300)); }
-  .border-maroon-400 { border-color: rgb(var(--color-maroon-400)); }
-  .border-maroon-500 { border-color: rgb(var(--color-maroon-500)); }
-  .border-maroon-600 { border-color: rgb(var(--color-maroon-600)); }
-  .border-maroon-700 { border-color: rgb(var(--color-maroon-700)); }
-  .border-maroon-800 { border-color: rgb(var(--color-maroon-800)); }
-  .border-maroon-900 { border-color: rgb(var(--color-maroon-900)); }
-
-  .from-maroon-600 { --tw-gradient-from: rgb(var(--color-maroon-600)); }
-  .from-maroon-700 { --tw-gradient-from: rgb(var(--color-maroon-700)); }
-  .from-maroon-900 { --tw-gradient-from: rgb(var(--color-maroon-900)); }
-  .to-maroon-600 { --tw-gradient-to: rgb(var(--color-maroon-600)); }
-  .to-maroon-700 { --tw-gradient-to: rgb(var(--color-maroon-700)); }
-  .to-maroon-900 { --tw-gradient-to: rgb(var(--color-maroon-900)); }
-
-  .hover\:bg-maroon-50:hover { background-color: rgb(var(--color-maroon-50)); }
-  .hover\:bg-maroon-500:hover { background-color: rgb(var(--color-maroon-500)); }
-  .hover\:bg-maroon-700:hover { background-color: rgb(var(--color-maroon-700)); }
-  .hover\:text-maroon-100:hover { color: rgb(var(--color-maroon-100)); }
-  .hover\:text-maroon-800:hover { color: rgb(var(--color-maroon-800)); }
-
-  .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
-  .hover\:rotate-1:hover { transform: rotate(1deg); }
-  .hover\:-rotate-1:hover { transform: rotate(-1deg); }
-  .hover\:rotate-45:hover { transform: rotate(45deg); }
-  .hover\:-rotate-45:hover { transform: rotate(-45deg); }
+  .hover\:-rotate-45:hover {
+    transform: rotate(-45deg);
+  }
 }

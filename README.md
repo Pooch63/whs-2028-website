@@ -66,10 +66,10 @@ Dynamic pricing component that:
 
 ## Color Scheme
 
-Muted maroon with white accents:
-- Primary: `#6B4C5A` (Maroon-600)
-- Variations: Complete maroon color palette (50-900)
-- Accent: White text and backgrounds
+Maroon palette (two shades only):
+- **maroon:** Primary dark maroon (`rgb(107 76 90)`) — nav, footer, buttons, borders, headings
+- **maroon-light:** Light maroon for backgrounds and borders
+- **text-bg:** White/background color for text on maroon (navbar, footer, hero, buttons)
 
 ## Getting Started
 

@@ -65,21 +65,21 @@ export default function CalendarComponent({
     <div className="hidden md:block">
       <div className="grid grid-cols-7 mb-1">
         {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day) => (
-          <div key={day} className="text-center font-bold text-maroon-700 text-xs py-1 border border-maroon-100">
+          <div key={day} className="text-center font-bold text-maroon text-xs py-1 border border-maroon-light">
             {day}
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-7 border border-maroon-200">
+      <div className="grid grid-cols-7 border border-maroon-light">
         {days.map((day, index) => (
           <div
             key={index}
-            className="aspect-square bg-white border border-maroon-200 p-1 flex flex-col justify-start text-left relative"
+            className="aspect-square bg-white border border-maroon-light p-1 flex flex-col justify-start text-left relative"
           >
             {day ? (
               <>
-                <div className="font-bold text-maroon-900 text-xs leading-none">{day}</div>
-                <div className="text-[9px] text-maroon-600 line-clamp-3 leading-tight mt-1">
+                <div className="font-bold text-maroon text-xl leading-none">{day}</div>
+                <div className="text-base text-maroon line-clamp-3 leading-snug mt-1">
                   {rafflePhrasesArray[(day - 1) % rafflePhrasesArray.length]}
                 </div>
               </>
@@ -102,13 +102,13 @@ export default function CalendarComponent({
         <div className="flex justify-between items-center mb-3">
           <button
             onClick={() => setSelectedWeek(Math.max(0, selectedWeek - 1))}
-            className="p-1 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
+            className="p-1 text-maroon hover:bg-maroon-light rounded disabled:opacity-30"
             disabled={selectedWeek === 0}
             aria-label="Previous week"
           >
             <ChevronUp className="w-5 h-5" />
           </button>
-          <span className="text-xs font-semibold text-maroon-700">
+          <span className="text-xs font-semibold text-maroon">
             Week {selectedWeek + 1}
           </span>
           <button
@@ -117,7 +117,7 @@ export default function CalendarComponent({
                 Math.min(Math.ceil(days.length / 7) - 1, selectedWeek + 1)
               )
             }
-            className="p-1 text-maroon-600 hover:bg-maroon-50 rounded disabled:opacity-30"
+            className="p-1 text-maroon hover:bg-maroon-light rounded disabled:opacity-30"
             disabled={selectedWeek === Math.ceil(days.length / 7) - 1}
             aria-label="Next week"
           >
@@ -125,24 +125,24 @@ export default function CalendarComponent({
           </button>
         </div>
 
-        <div className="grid grid-cols-7 mb-1 border border-maroon-200">
+        <div className="grid grid-cols-7 mb-1 border border-maroon-light">
           {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day) => (
-            <div key={day} className="text-center font-bold text-maroon-700 text-xs py-1 border border-maroon-200">
+            <div key={day} className="text-center font-bold text-maroon text-xs py-1 border border-maroon-light">
               {day}
             </div>
           ))}
         </div>
 
-        <div className="grid grid-cols-7 border border-maroon-200">
+        <div className="grid grid-cols-7 border border-maroon-light">
           {weeks[selectedWeek]?.map((day, index) => (
             <div
               key={index}
-              className="aspect-square bg-white border border-maroon-200 p-1 flex flex-col justify-start text-left"
+              className="aspect-square bg-white border border-maroon-light p-1 flex flex-col justify-start text-left"
             >
               {day ? (
                 <>
-                  <div className="font-bold text-maroon-900 text-xs leading-none">{day}</div>
-                  <div className="text-[9px] text-maroon-600 line-clamp-3 leading-tight mt-1">
+                  <div className="font-bold text-maroon text-xl leading-none">{day}</div>
+                  <div className="text-base text-maroon line-clamp-3 leading-snug mt-1">
                     {rafflePhrasesArray[(day - 1) % rafflePhrasesArray.length]}
                   </div>
                 </>
