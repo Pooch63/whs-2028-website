@@ -1,5 +1,6 @@
 import CalendarComponent from '@/components/CalendarComponent';
 import FundraisingMessage from '@/components/FundraisingMessage';
+import PaymentInfo from '@/components/PaymentInfo';
 import { Metadata } from 'next';
 import { Gift, Popcorn, Gamepad2, Sparkles } from 'lucide-react';
 
@@ -125,6 +126,9 @@ export default function RafflePage() {
           <FundraisingMessage />
         </div>
       </section>
+
+      {/* Payment Info */}
+      <PaymentInfo />
     </main>
   );
 }

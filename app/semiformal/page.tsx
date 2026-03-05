@@ -1,4 +1,5 @@
 import FundraisingMessage from '@/components/FundraisingMessage';
+import PaymentInfo from '@/components/PaymentInfo';
 import TicketPricing from '@/components/TicketPricing';
 import { Metadata } from 'next';
 import { Calendar, MapPin, Shirt, UtensilsCrossed, Music } from 'lucide-react';
@@ -71,6 +72,9 @@ export default function SemiformalPage() {
           <FundraisingMessage />
         </div>
       </section>
+
+      {/* Payment Info */}
+      <PaymentInfo />
     </main>
   );
 }

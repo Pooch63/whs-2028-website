@@ -1,8 +1,9 @@
 import Link from 'next/link';
+import PaymentInfo from '@/components/PaymentInfo';
 
 export default function Home() {
   return (
-    <main className="bg-bg min-h-screen">
+    <main className="bg-bg min-h-screen flex flex-col">
       {/* Full-height hero: image fills top, overlay straddles so half is over image on desktop */}
       <section className="relative w-full min-h-screen overflow-hidden flex flex-col">
         {/* Background image - fills viewport; on desktop image “ends” at 70vh so overlay can straddle */}
@@ -50,6 +51,9 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* Payment Info */}
+      <PaymentInfo />
     </main>
   );
 }
