@@ -1,6 +1,4 @@
 import FundraisingMessage from '@/components/FundraisingMessage';
-import PaymentInfo from '@/components/PaymentInfo';
-import TicketPricing from '@/components/TicketPricing';
 import { Metadata } from 'next';
 import { Calendar, MapPin, Shirt, UtensilsCrossed, Music } from 'lucide-react';
 
@@ -29,10 +27,8 @@ export default function SemiformalPage() {
       <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="bg-maroon text-white text-center py-3 px-4 rounded-lg mb-4 font-semibold text-lg">
-            Buy your tickets now — there are two windows. The second window has higher prices. Don’t wait.
+            Ticket prices are $75.
           </div>
-          <h2 className="text-2xl font-bold text-center text-maroon mb-4">Ticket Pricing</h2>
-          <TicketPricing />
         </div>
       </section>
 
@@ -61,7 +57,7 @@ export default function SemiformalPage() {
             <span>DJ, games, and photo opportunities.</span>
           </div>
           <p className="pt-2 border-t border-maroon/20 mt-4 text-base sm:text-lg text-gray-600">
-            <strong>Ticket sales:</strong> There are two windows to buy tickets. <strong>First window: $50 — March 13–27.</strong> Second window: $65 — April 18–25 (prices go up). All sales close April 25. <strong>Buy your tickets now to lock in the lower price.</strong>
+            <strong>Ticket prices are $75.</strong>
           </p>
         </div>
       </section>
@@ -74,7 +70,13 @@ export default function SemiformalPage() {
       </section>
 
       {/* Payment Info */}
-      <PaymentInfo />
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-maroon-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-center min-h-[200px]">
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-maroon-900 text-center">
+            Payments through Rectrac
+          </p>
+        </div>
+      </section>
     </main>
   );
 }

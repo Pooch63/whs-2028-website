@@ -120,6 +120,27 @@ export default function RafflePage() {
         </div>
       </section>
 
+      {/* Ticket Pricing */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 className="text-2xl font-bold text-maroon mb-6 text-center">
+          Raffle Ticket Pricing
+        </h2>
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
+          <div className="bg-maroon-light rounded-lg px-6 py-4 border-t-4 border-maroon text-center min-w-[140px]">
+            <div className="text-2xl font-bold text-maroon">1 ticket</div>
+            <div className="text-xl font-semibold text-maroon">$50</div>
+          </div>
+          <div className="bg-maroon-light rounded-lg px-6 py-4 border-t-4 border-maroon text-center min-w-[140px]">
+            <div className="text-2xl font-bold text-maroon">3 tickets</div>
+            <div className="text-xl font-semibold text-maroon">$130</div>
+          </div>
+          <div className="bg-maroon-light rounded-lg px-6 py-4 border-t-4 border-maroon text-center min-w-[140px]">
+            <div className="text-2xl font-bold text-maroon">5 tickets</div>
+            <div className="text-xl font-semibold text-maroon">$200</div>
+          </div>
+        </div>
+      </section>
+
       {/* Fundraising Message */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">

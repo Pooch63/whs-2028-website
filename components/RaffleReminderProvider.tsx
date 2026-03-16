@@ -29,7 +29,7 @@ export default function RaffleReminderProvider() {
     return () => cancelAnimationFrame(frame);
   }, [visible]);
 
-  if (!isSemiformal || !visible) return null;
+  if (!isSemiformal || !visible || dismissed) return null;
 
   return (
     <div
