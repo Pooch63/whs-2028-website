@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import PaymentInfo from '@/components/PaymentInfo';
 
 export default function Home() {
   return (
