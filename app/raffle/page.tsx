@@ -148,6 +148,24 @@ export default function RafflePage() {
         </div>
       </section>
 
+      {/* Business Sponsorship Section */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div className="bg-maroon-light rounded-lg p-8 border-l-4 border-maroon">
+          <h2 className="text-3xl font-bold text-maroon mb-4">Looking to Sponsor?</h2>
+          <p className="text-gray-700 mb-4 text-lg">
+            Help support the Wellesley High School Class of 2028 and gain <strong>direct exposure to Wellesley families and parents</strong>. By sponsoring a raffle prize, your business reaches engaged community members while supporting student activities and memories.
+          </p>
+          <p className="text-gray-700 mb-6 text-lg">
+            Interested in becoming a sponsor? We're accepting donations through <strong>April 20th</strong> to be featured in our raffle. Reach out to:
+          </p>
+          <div className="bg-white rounded p-4 text-center">
+            <a href="mailto:hodgesc@wellesleyps.org" className="text-maroon font-bold text-xl hover:underline">
+              hodgesc@wellesleyps.org
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Payment Info */}
       <PaymentInfo />
     </main>

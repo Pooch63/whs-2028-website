@@ -71,10 +71,23 @@ export default function SemiformalPage() {
 
       {/* Payment Info */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-maroon-50">
-        <div className="max-w-7xl mx-auto flex items-center justify-center min-h-[200px]">
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-maroon-900 text-center">
-            Payments through Rectrac
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold text-maroon text-center mb-6">Purchase Your Ticket</h2>
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-gray-700 text-center text-lg mb-2">
+                Click below to purchase your semiformal ticket through RecTrac.
+              </p>
+              <a 
+                href="https://mawellesleypsweb.myvscloud.com/webtrac/web/splash.html?interfaceparameter=webtrac_ps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-maroon text-white font-bold py-3 px-8 rounded-lg hover:bg-maroon-dark transition text-lg"
+              >
+                Buy Ticket via RecTrac
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
