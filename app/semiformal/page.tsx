@@ -62,6 +62,26 @@ export default function SemiformalPage() {
         </div>
       </section>
 
+      <section className="pb-10 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div
+          className="bg-maroon-light rounded-lg p-6 sm:p-8 border-l-4 border-maroon"
+          role="note"
+        >
+          <p className="text-gray-800 text-center text-base sm:text-lg leading-relaxed">
+            If purchasing a semiformal ticket presents a financial hardship to your family, please
+            reach out to{' '}
+            <a
+              href="mailto:shattuckc@wellesleyps.org"
+              className="text-maroon font-semibold hover:underline"
+            >
+              shattuckc@wellesleyps.org
+            </a>{' '}
+            about financial aid. The Class of 2028 is pledged to ensuring cost is{' '}
+            <strong>never</strong> a barrier to involvement.
+          </p>
+        </div>
+      </section>
+
       {/* Fundraising Message */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">

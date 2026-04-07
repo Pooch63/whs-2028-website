@@ -1,4 +1,3 @@
-import CalendarComponent from '@/components/CalendarComponent';
 import FundraisingMessage from '@/components/FundraisingMessage';
 import PaymentInfo from '@/components/PaymentInfo';
 import { Metadata } from 'next';
@@ -25,6 +24,15 @@ export default function RafflePage() {
         </div>
       </section>
 
+      {/* Raffle flyer */}
+      <section className="w-full">
+        <img
+          src="/images/april-raffle.jpg"
+          alt="April Raffle — Class of 2028"
+          className="w-full block"
+        />
+      </section>
+
       {/* How It Works */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -40,7 +48,7 @@ export default function RafflePage() {
             <div className="text-3xl font-bold text-maroon mb-3">2</div>
             <h3 className="font-bold text-maroon mb-2">Daily Drawings</h3>
             <p className="text-gray-700 text-sm">
-              Throughout April, check the calendar to see what prizes are available each day.
+              Throughout April, check the flyer above to see what prizes are available each day.
             </p>
           </div>
 
@@ -68,19 +76,6 @@ export default function RafflePage() {
             <a href="mailto:hodgesc@wellesleyps.org" className="text-maroon font-bold text-xl hover:underline">
               hodgesc@wellesleyps.org
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Calendar Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-maroon mb-6 text-center">
-            April 2026 Prize Calendar
-          </h2>
-
-          <div className="bg-white rounded-lg shadow-lg p-4 md:p-6">
-            <CalendarComponent month={4} year={2026} />
           </div>
         </div>
       </section>
