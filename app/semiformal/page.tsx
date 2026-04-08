@@ -46,7 +46,7 @@ export default function SemiformalPage() {
           </div>
           <div className="flex items-center gap-3">
             <Shirt className="w-6 h-6 text-maroon flex-shrink-0" />
-            <span><strong>Semiformal attire</strong> — Cocktail dresses, tuxedos, or formal separates.</span>
+            <span><strong>Semiformal attire</strong></span>
           </div>
           <div className="flex items-center gap-3">
             <UtensilsCrossed className="w-6 h-6 text-maroon flex-shrink-0" />
@@ -54,7 +54,7 @@ export default function SemiformalPage() {
           </div>
           <div className="flex items-center gap-3">
             <Music className="w-6 h-6 text-maroon flex-shrink-0" />
-            <span>DJ, games, and photo opportunities.</span>
+            <span>DJ and games.</span>
           </div>
           <p className="pt-2 border-t border-maroon/20 mt-4 text-base sm:text-lg text-gray-600">
             <strong>Ticket prices are $75.</strong>
