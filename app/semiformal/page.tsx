@@ -32,6 +32,28 @@ export default function SemiformalPage() {
         </div>
       </section>
 
+      {/* Purchase Ticket Section */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-maroon-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold text-maroon text-center mb-6">Purchase Your Ticket</h2>
+            <div className="flex flex-col items-center gap-4">
+              <p className="text-gray-700 text-center text-lg mb-2">
+                Click below to purchase your semiformal ticket through RecTrac.
+              </p>
+              <a 
+                href="https://mawellesleypsweb.myvscloud.com/webtrac/web/splash.html?interfaceparameter=webtrac_ps"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-maroon text-white font-bold py-3 px-8 rounded-lg hover:bg-maroon-dark transition text-lg"
+              >
+                Buy Ticket via RecTrac
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Event Details */}
       <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-maroon mb-5">Event details</h2>
@@ -86,28 +108,6 @@ export default function SemiformalPage() {
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <FundraisingMessage />
-        </div>
-      </section>
-
-      {/* Payment Info */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-maroon-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-maroon text-center mb-6">Purchase Your Ticket</h2>
-            <div className="flex flex-col items-center gap-4">
-              <p className="text-gray-700 text-center text-lg mb-2">
-                Click below to purchase your semiformal ticket through RecTrac.
-              </p>
-              <a 
-                href="https://mawellesleypsweb.myvscloud.com/webtrac/web/splash.html?interfaceparameter=webtrac_ps"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-maroon text-white font-bold py-3 px-8 rounded-lg hover:bg-maroon-dark transition text-lg"
-              >
-                Buy Ticket via RecTrac
-              </a>
-            </div>
-          </div>
         </div>
       </section>
     </main>
